@@ -1,17 +1,13 @@
-def humanized_time_ago(time_ago_in_minutes)
+get '/' do
+  
+  # ...
+     def humanized_time_ago(time_ago_in_minutes)
         if time_ago_in_minutes >= 60
             "#{time_ago_in_minutes / 60} hours ago"
         else
             "#{time_ago_in_minutes} minutes ago"
-    end
-end
-
-
-
-get '/' do
-  
-  # ...
-  
+        end
+     end
   
    post_shark = {
     username: "sharky_j",
@@ -26,7 +22,6 @@ get '/' do
     }]
    }
     
-    humanized_time_ago(post[time_ago_in_minutes])
     
    post_whale = {
     username: "kirk_whalum",
@@ -41,7 +36,6 @@ get '/' do
     }]
    }
     
-    humanized_time_ago(post[time_ago_in_minutes])
     
    post_marlin = {
     username: "marlin_peppa",
@@ -58,4 +52,5 @@ get '/' do
    
    [post_shark, post_whale, post_marlin].to_s
    
+  erb :index
 end
