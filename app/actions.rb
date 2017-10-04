@@ -30,7 +30,7 @@ post '/signup' do
     
     @user = User.new({ email: email, avatar_url: avatar_url, username: username, password: password })
         
-    if user.save
+    if @user.save
       redirect to('/login')
     else
       erb(:signup)  
